@@ -1,14 +1,13 @@
 import React, { Fragment, Component } from 'react';
-import './NotFoundPage.css'
-
-class NotFound extends Component {
+import './Home.css'
+class Homepage extends Component {
   render() {
     return (
       <Fragment>
-        notfound
+        home
       </Fragment>
     )
   }
 }
 
-export default NotFound;
+export default Homepage;

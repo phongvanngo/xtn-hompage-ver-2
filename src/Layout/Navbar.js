@@ -6,11 +6,36 @@ class Navbar extends Component {
   render() {
     return (
       <Fragment>
-        <NavLink activeClassName="currentLink" to="/home">home</NavLink>
+
+        <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light scrolled sleep awake" id="ftco-navbar">
+          <div className="container">
+            <a className="navbar-brand" href="index.html">XUÂN TÌNH NGUYỆN</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+              aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" >
+              <span className="oi oi-menu"></span> Menu
+      </button>
+
+            <div className="collapse navbar-collapse" id="ftco-nav">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item "><NavLink to="/home" activeClassName="active" className="nav-link">Trang chủ</NavLink></li>
+                <li className="nav-item "><NavLink to="/team" activeClassName="active" className="nav-link">Đội hình</NavLink></li>
+                <li className="nav-item"><NavLink to="/shop" activeClassName="active" className="nav-link">Sản phẩm</NavLink></li>
+                <li className="nav-item"><NavLink to="/blog" activeClassName="active" className="nav-link">Bài viết</NavLink></li>
+                <li className="nav-item"><NavLink to="/contact" activeClassName="active" className="nav-link">Hộp thư</NavLink></li>
+                <li className="nav-item cta cta-colored"><NavLink to="/" activeClassName="active" className="nav-link"><span
+                  className="icon-shopping_cart"></span>[0]</NavLink></li>
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+        {/* <NavLink activeClassName="currentLink" to="/home">home</NavLink>
         <NavLink activeClassName="currentLink" to="/about">about</NavLink>
         <NavLink activeClassName="currentPage" to="/">notfound</NavLink>
-        <NavLink activeClassName="currentPage" to="/nolink">nolink</NavLink>
-      </Fragment>
+        <NavLink activeClassName="currentPage" to="/nolink">nolink</NavLink> */}
+      </Fragment >
     )
   }
 }

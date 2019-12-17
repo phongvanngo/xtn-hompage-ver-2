@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import Navbar from './Layout/Navbar';
-import Homepage from './Pages/Hompage/Hompage'
+import Homepage from './Pages/Home/Home'
+import Shop from './Pages/Shop/Shop'
+import Blog from './Pages/Blog/Blog'
+import Contact from './Pages/Contact/Contact'
+import Team from './Pages/Team/Team'
 import NotFoundpage from './Pages/NotFoundPage/NotFoundPage'
-import About from './Pages/About/About';
+
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 class Routes extends Component {
@@ -17,9 +21,24 @@ class Routes extends Component {
       },
 
       {
-        path: '/about',
+        path: '/shop',
         exact: false,
-        main: () => <About />
+        main: () => <Shop />
+      },
+      {
+        path: '/team',
+        exact: false,
+        main: () => <Team />
+      },
+      {
+        path: '/blog',
+        exact: false,
+        main: () => <Blog />
+      },
+      {
+        path: '/contact',
+        exact: false,
+        main: () => <Contact />
       },
 
       {
@@ -38,7 +57,7 @@ class Routes extends Component {
           })
           }
         </Switch>
-        <Redirect exact from="/" to="/about" />
+        <Redirect exact from="/" to="/home" />
       </Router>
     );
   }

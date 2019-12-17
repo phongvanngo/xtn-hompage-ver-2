@@ -4,7 +4,7 @@ class Homepage extends Component {
   render() {
     return (
       <Fragment>
-        home
+        team
       </Fragment>
     )
   }
