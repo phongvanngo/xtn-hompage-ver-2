@@ -10,7 +10,7 @@ import { fetchPostsDataRequest } from './../../Actions/Actions'
 
 class Blog extends Component {
 
-componentDidMount() {
+  componentDidMount() {
     this.props.fetchAllPosts();
   }
 

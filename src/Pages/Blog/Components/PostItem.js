@@ -5,7 +5,7 @@ import { onPostViewing } from './../../../Actions/Actions'
 
 import './PostItem.css'
 
-class PostsList extends Component {
+class PostsItem extends Component {
 
   getImgInContent = (content) => {
     var m = content.indexOf(`<img src=`) + 10;
@@ -56,9 +56,9 @@ class PostsList extends Component {
     return (
 
       <Fragment>
-        <div className="col-md-12 d-flex ">
+        <div className="col-md-8 d-flex ">
           <div className="blog-entry align-self-stretch d-md-flex">
-            <a href="blog-single.html" className="block-20" style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <a className="block-20" style={{ backgroundImage: `url(${backgroundImage})` }}>
             </a>
             <div className="text d-block pl-md-4">
               <div className="meta mb-3">
@@ -66,11 +66,11 @@ class PostsList extends Component {
                 <div><i class="fas fa-user"></i>{" " + this.props.post.author}</div>
                 {/* <div><a href="#" className="meta-chat"><span className="icon-chat" /> 3</a></div> */}
               </div>
-              <h3 className="heading"><a>{this.props.post.title}</a></h3>
+              <h3 className="heading"><a onClick={this.props.readmore}>{this.props.post.title}</a></h3>
               <div className="descriptionText">
                 {ReactHtmlParser(this.getDescription(this.props.post.content))}
               </div>
-              <p><button className="btn btn-primary py-2 px-3" onClick={this.props.readmore}>Read more</button></p>
+              <p><button className="btn btn-primary py-2 px-3" onClick={this.props.readmore}>Đọc thêm</button></p>
             </div>
           </div>
         </div>
@@ -94,4 +94,4 @@ const mapDispatchToProps = (dispatch, props) => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostsList);
+export default connect(mapStateToProps, mapDispatchToProps)(PostsItem);

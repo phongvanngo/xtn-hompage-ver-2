@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import { connect } from 'react-redux';
 import { offPostViewing } from './../../../Actions/Actions'
+import PostItemSidebar from './PostItemSidebar'
+
 class Post extends Component {
 
   editImageInContent = (content) => {
@@ -14,35 +16,58 @@ class Post extends Component {
 
   }
 
+  componentDidMount() {
+    window.scrollTo(400, 400)
+  }
+
   render() {
-    // console.log(this.editImageInContent("><figure class=\"image\"><img src=\"https://i.imgur.com/qCu7mgK.jpg\"></figure>"))
+
+    var showPostsListSidebar = this.props.posts.map((ele, index) => {
+      return (
+        <PostItemSidebar
+          post={ele}
+          key={index}
+          index={index + 1}
+        />
+      )
+    })
+
     return (
-      // <div className="container">
-      //   {ReactHtmlParser(html)}
-      // </div>
       <Fragment>
         <section className="ftco-section ftco-degree-bg">
           <div className="container">
             <div className="row">
-              <p style ={{padding:0}} className="col-lg-12 ">
-                <span style={{ fontWeight: 800,fontSize:'50px',color:'black' }} className="mb-3">{this.props.post.title}</span >
-              </p>
-              <p>
-                {ReactHtmlParser(this.editImageInContent(this.props.post.content))}
-              </p>
-
+              <div class="col-lg-8">
+                <p style={{ padding: 0 }} >
+                  <span style={{ fontWeight: 800, fontSize: '50px', color: 'black' }} className="mb-3">{this.props.post.title}</span >
+                </p>
+                <p>
+                  <div><i class="far fa-calendar-alt"></i>{" " + this.props.post.time_created}</div>
+                  <div><i class="fas fa-user"></i>{" " + this.props.post.author}</div>
+                </p>
+                <p>
+                  {ReactHtmlParser(this.editImageInContent(this.props.post.content))}
+                </p>
+              </div>
+              <div class="col-lg-4 sidebar">
+                <div class="sidebar-box">
+                  <h3 class="heading">Bài viết gần đây</h3>
+                  {showPostsListSidebar}
+                </div>
+              </div>
             </div>
           </div>
         </section>
         <button style={{ position: "fixed", top: "90vh", left: "90vw" }} className="btn btn-primary py-2 px-3 " onClick={this.props.comeBack}>Quay lại</button>
-      </Fragment>
+      </Fragment >
     )
   }
 }
 const mapStateToProps = (state) => {
 
   return {
-    post: state.isPostViewing
+    post: state.isPostViewing,
+    posts: state.posts
   }
 };
 
