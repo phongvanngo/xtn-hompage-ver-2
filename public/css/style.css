@@ -11889,6 +11889,13 @@ h5,
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+.hero-wrap .slider-text .baiviet {
+  font-weight: 800;
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 
 .hero-wrap .slider-text .btn-primary {
   border: 1px solid rgba(255, 255, 255, 0.4);
