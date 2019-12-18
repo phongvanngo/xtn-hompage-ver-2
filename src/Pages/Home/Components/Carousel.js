@@ -16,6 +16,7 @@ class XTNCarousel extends Component {
           transitionTime={500}
           infiniteLoop={true}
           interval = {5000}
+          
         >
           <div>
             <img src="https://images.unsplash.com/photo-1557958114-3d2440207108?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"

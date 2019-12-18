@@ -18,3 +18,15 @@ export const fetchPostsData = (posts) => {
     posts
   }
 }
+
+export const onPostViewing = (post) => {
+  return {
+    type: Types.ON_POST_VIEWING,
+    post
+  }
+}
+export const offPostViewing = () => {
+  return {
+    type: Types.OFF_POST_VIEWING
+  }
+}

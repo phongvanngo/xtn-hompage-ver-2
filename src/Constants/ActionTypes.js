@@ -1,5 +1,5 @@
 
 export const OPEN_POST_FORM = "OPEN_POST_FORM";
 export const FETCH_POSTS_DATA = "FETCH_POSTS_DATA"
-export const ON_ARTICLE = "ON_ARTICLE"
-export const OFF_ARTICLE = "OFF_ARTICLE"
+export const ON_POST_VIEWING = "ON_POST_VIEWING"
+export const OFF_POST_VIEWING = "OFF_POST_VIEWING"
