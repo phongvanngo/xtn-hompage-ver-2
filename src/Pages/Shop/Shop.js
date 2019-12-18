@@ -5,7 +5,7 @@ class About extends Component {
   render() {
     return (
       <Fragment>
-        shopping
+ 
       </Fragment>
     )
   }
