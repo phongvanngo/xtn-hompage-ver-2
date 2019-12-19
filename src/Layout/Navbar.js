@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './Navbar.css';
 
 class Navbar extends Component {
@@ -19,11 +20,11 @@ class Navbar extends Component {
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item "><NavLink to="/home" activeClassName="active" className="nav-link">Trang chủ</NavLink></li>
                 <li className="nav-item "><NavLink to="/team" activeClassName="active" className="nav-link">Đội hình</NavLink></li>
-                <li className="nav-item"><NavLink to="/shop" activeClassName="active" className="nav-link">Sản phẩm</NavLink></li>
+                <li className="nav-item"><NavLink to="/product" activeClassName="active" className="nav-link">Sản phẩm</NavLink></li>
                 <li className="nav-item"><NavLink to="/blog" activeClassName="active" className="nav-link">Bài viết</NavLink></li>
-                <li className="nav-item"><NavLink to="/contact" activeClassName="active" className="nav-link">Hộp thư</NavLink></li>
-                <li className="nav-item cta cta-colored"><NavLink to="/" activeClassName="active" className="nav-link"><span
-                  className="icon-shopping_cart"></span>[0]</NavLink></li>
+                <li className="nav-item"><NavLink to="/feedback" activeClassName="active" className="nav-link">Hộp thư</NavLink></li>
+                <li className="nav-item cta cta-colored"><NavLink to="/cart" activeClassName="active" className="nav-link">
+                  <span className="icon-shopping_cart" ><span style={{ 'color': this.props.cart.length > 0 ? 'red' : 'white' }}>{"[" + this.props.cart.length + "]"}</span></span></NavLink></li>
 
               </ul>
             </div>
@@ -40,4 +41,11 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+const mapStateToProps = state => {
+  return {
+    cart: state.cart
+  }
+}
+
+
+export default connect(mapStateToProps, null)(Navbar);

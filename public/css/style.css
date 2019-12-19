@@ -11773,7 +11773,7 @@ h5,
 
 .ftco-navbar-light.scrolled .nav-item.cta>a span {
   display: inline-block;
-  color: #fff !important;
+  color: #fff ;
 }
 
 .ftco-navbar-light.scrolled .nav-item.cta.cta-colored span {

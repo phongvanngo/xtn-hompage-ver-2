@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import Navbar from './Layout/Navbar';
 import Homepage from './Pages/Home/Home'
-import Shop from './Pages/Shop/Shop'
 import Blog from './Pages/Blog/Blog'
-import Contact from './Pages/Contact/Contact'
 import Team from './Pages/Team/Team'
 import NotFoundpage from './Pages/NotFoundPage/NotFoundPage'
+
+import ProductsPage from './Pages/ProductsPage/ProductsPage';
+import CartPage from './Pages/CartPage/CartPage';
+import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
+import FeedbackPage from './Pages/FeedbackPage/FeedbackPage';
+
 
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
@@ -19,11 +23,10 @@ class Routes extends Component {
         exact: true,
         main: () => <Homepage />
       },
-
       {
-        path: '/shop',
+        path: '/product',
         exact: false,
-        main: () => <Shop />
+        main: () => <ProductsPage />
       },
       {
         path: '/team',
@@ -36,16 +39,27 @@ class Routes extends Component {
         main: () => <Blog />
       },
       {
-        path: '/contact',
-        exact: false,
-        main: () => <Contact />
+        path: '/feedback',
+        exact: true,
+        main: () => <FeedbackPage />
       },
-
+      {
+        path: '/cart',
+        exact: true,
+        main: () => <CartPage />
+      },
+      {
+        path: '/checkout',
+        exact: false,
+        main: () => <CheckoutPage />
+      },
       {
         path: '/',
         exact: false,
         main: () => <NotFoundpage />
       },
+
+
     ];
 
     return (
