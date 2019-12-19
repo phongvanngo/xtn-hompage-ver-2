@@ -9,7 +9,10 @@ class PostsItem extends Component {
 
   getImgInContent = (content) => {
     var m = content.indexOf(`<img src=`) + 10;
-    var n = content.indexOf(">", m) - 1;
+    var n = m;
+    while ((content.charAt(n) !== String.fromCharCode(34)) && (n < content.length)) {
+      n++;
+    }
     return content.slice(m, n);
   };
 
@@ -53,10 +56,10 @@ class PostsItem extends Component {
 
   render() {
     const backgroundImage = this.getImgInContent(this.props.post.content);
-    console.log(this.getImgInContent('</p><p><br>&nbsp;</p><figure class=\"image\"><img src=\"https://static-cdn.uef.edu.vn/newsimg/sinh-vien/Xuan-tinh-nguyen-2017/UEF_xuantinh%20nguyen_2017%20(20).JPG\" alt=\"\"></figure><fig'));
     return (
 
       <Fragment>
+
         <div className="col-md-8 d-flex ">
           <div className="blog-entry align-self-stretch d-md-flex">
             <a className="block-20" style={{ backgroundImage: `url(${backgroundImage})` }}>
