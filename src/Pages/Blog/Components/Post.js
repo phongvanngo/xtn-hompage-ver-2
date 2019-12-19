@@ -20,6 +20,10 @@ class Post extends Component {
     window.scrollTo(400, 400)
   }
 
+  componentWillReceiveProps() {
+    window.scrollTo(400, 400)
+  }
+
   render() {
 
     var showPostsListSidebar = this.props.posts.map((ele, index) => {

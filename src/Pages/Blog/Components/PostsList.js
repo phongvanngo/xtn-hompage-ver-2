@@ -8,6 +8,8 @@ class PostsList extends Component {
 
   componentDidMount() {
     window.scrollTo(150, 150)
+    this.props.fetchAllPosts();
+
   }
 
   render() {

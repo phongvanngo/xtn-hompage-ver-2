@@ -53,6 +53,7 @@ class PostsItem extends Component {
 
   render() {
     const backgroundImage = this.getImgInContent(this.props.post.content);
+    console.log(this.getImgInContent('</p><p><br>&nbsp;</p><figure class=\"image\"><img src=\"https://static-cdn.uef.edu.vn/newsimg/sinh-vien/Xuan-tinh-nguyen-2017/UEF_xuantinh%20nguyen_2017%20(20).JPG\" alt=\"\"></figure><fig'));
     return (
 
       <Fragment>
@@ -62,8 +63,8 @@ class PostsItem extends Component {
             </a>
             <div className="text d-block pl-md-4">
               <div className="meta mb-3">
-                <div><i class="far fa-calendar-alt"></i>{" " + this.props.post.time_created}</div>
-                <div><i class="fas fa-user"></i>{" " + this.props.post.author}</div>
+                <div>{this.props.post.time_created}</div>
+                <div>{" " + this.props.post.author}</div>
                 {/* <div><a href="#" className="meta-chat"><span className="icon-chat" /> 3</a></div> */}
               </div>
               <h3 className="heading"><a onClick={this.props.readmore}>{this.props.post.title}</a></h3>

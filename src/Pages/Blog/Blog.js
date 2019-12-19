@@ -10,10 +10,6 @@ import { fetchPostsDataRequest } from './../../Actions/Actions'
 
 class Blog extends Component {
 
-  componentDidMount() {
-    this.props.fetchAllPosts();
-  }
-
   render() {
     return (
       <Fragment>
