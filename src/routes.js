@@ -3,6 +3,7 @@ import Navbar from './Layout/Navbar';
 import Homepage from './Pages/Home/Home'
 import Blog from './Pages/Blog/Blog'
 import Team from './Pages/Team/Team'
+import Post from './Pages/Blog/Components/Post'
 import NotFoundpage from './Pages/NotFoundPage/NotFoundPage'
 
 import ProductsPage from './Pages/ProductsPage/ProductsPage';
@@ -44,10 +45,16 @@ class Routes extends Component {
         main: () => <FeedbackPage />
       },
       {
+        path: '/post',
+        exact: false,
+        main: () => <Post />
+      },
+      {
         path: '/cart',
         exact: true,
         main: () => <CartPage />
       },
+
       {
         path: '/checkout',
         exact: false,
@@ -57,7 +64,8 @@ class Routes extends Component {
         path: '/',
         exact: false,
         main: () => <NotFoundpage />
-      },
+      }
+
 
 
     ];
@@ -66,6 +74,7 @@ class Routes extends Component {
       <Router>
         <Navbar />
         <Switch>
+        <Redirect exact from="/" to="/home" />
           {routes.map((route, index) => {
             return <Route path={route.path} component={route.main} exact={route.exact} key={index} />
           })

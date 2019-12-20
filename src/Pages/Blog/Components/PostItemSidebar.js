@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { onPostViewing } from '../../../Actions/Actions'
 
 import './PostItem.css'
@@ -9,7 +10,10 @@ class PostItemSidebar extends Component {
 
   getImgInContent = (content) => {
     var m = content.indexOf(`<img src=`) + 10;
-    var n = content.indexOf(">", m) - 1;
+    var n = m;
+    while ((content.charAt(n) !== String.fromCharCode(34)) && (n < content.length)) {
+      n++;
+    }
     return content.slice(m, n);
   };
 
@@ -21,7 +25,7 @@ class PostItemSidebar extends Component {
         <div className="block-21 mb-4 d-flex">
           <a className="blog-img mr-4" style={{ backgroundImage: `url(${backgroundImage})` }} />
           <div className="text">
-            <h3 className="heading-1"><a onClick={this.props.readmore}>{this.props.post.title}</a></h3>
+            <h3 className="heading-1"><NavLink to="/post" onClick={this.props.readmore}>{this.props.post.title}</NavLink></h3>
             <div className="meta">
               <div><i className="far fa-calendar-alt"></i>{" " + this.props.post.time_created}</div>
               <div><i className="fas fa-user"></i>{" " + this.props.post.author}</div>

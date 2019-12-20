@@ -17,15 +17,14 @@ class Post extends Component {
   }
 
   componentDidMount() {
-    window.scrollTo(400, 400)
+    window.scrollTo(0, 0)
   }
 
   componentWillReceiveProps() {
-    window.scrollTo(400, 400)
+    window.scrollTo(0, 0)
   }
 
   render() {
-
     var showPostsListSidebar = this.props.posts.map((ele, index) => {
       return (
         <PostItemSidebar
@@ -62,7 +61,7 @@ class Post extends Component {
             </div>
           </div>
         </section>
-        <button style={{ position: "fixed", top: "90vh", left: "90vw" }} className="btn btn-primary py-2 px-3 " onClick={this.props.comeBack}>Quay lại</button>
+        {/* <button style={{ position: "fixed", top: "90vh", left: "90vw" }} className="btn btn-primary py-2 px-3 " onClick={this.props.comeBack}>Quay lại</button> */}
       </Fragment >
     )
   }
@@ -83,4 +82,4 @@ const mapDispatchToProps = (dispatch, props) => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Post);
+export default connect(mapStateToProps, null)(Post);

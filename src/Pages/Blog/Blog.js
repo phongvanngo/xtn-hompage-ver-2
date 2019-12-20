@@ -23,8 +23,8 @@ class Blog extends Component {
             </div>
           </div>
         </div>
-
-        {this.props.isPostViewing === null ? <PostsList /> : <Post />}
+        <PostsList />
+        {/* {this.props.isPostViewing === null ? <PostsList /> : <Post />} */}
       </Fragment >
     )
   }
