@@ -1,4 +1,3 @@
-import callApi from './../Utils/apiCaller';
 import * as Types from '../Constants/ActionTypes'
 import api from "../service/api";
 
@@ -45,7 +44,10 @@ export const actFetchProductsRequest = () => {
     return api.get('product')
       .then(response => {
         dispatch(getProducts(response.data));
-      });
+      }).catch(error => {
+        console.log(error);
+        alert('lỗi kết nối');
+      });;
   }
 }
 
@@ -85,12 +87,19 @@ export const totalCart = payload => {
   }
 }
 
+export const removeCart = () => {
+  return {
+    type: Types.REMOVE_CART
+  }
+}
+
 export const actPostOrderRequest = payload => {
   return dispatch => {
     return api.post('checkout', payload)
       .then(res => {
         if (res.status === 200) {
           dispatch(showModalSuccess('Đặt hàng thành công'));
+          dispatch(removeCart()) //delete cart in store
           localStorage.removeItem("products");
         }
       })

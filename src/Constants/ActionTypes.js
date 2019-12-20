@@ -11,3 +11,5 @@ export const SHOW_MODAL_SUCCESS = 'SHOW_MODAL_SUCCESS';
 export const UPDATE_CART_ITEM = 'UPDATE_CART_ITEM';
 export const DELETE_CART_ITEM = 'DELETE_CART_ITEM';
 export const TOTAL_CART = 'TOTAL_CART';
+
+export const REMOVE_CART = "REMOVE_CART"
