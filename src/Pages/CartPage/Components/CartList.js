@@ -9,7 +9,7 @@ class CartList extends Component {
     let list = null;
     list = cart.map((item, index) => {
       return (
-        <CartItem tensp={item.product.tensp} gia={item.product.gia} quantity={item.quantity} key={index} mota={item.product.mota}/>
+        <CartItem img = {item.product.img} tensp={item.product.tensp} gia={item.product.gia} quantity={item.quantity} key={index} mota={item.product.mota}/>
       )
     });
     return list;
