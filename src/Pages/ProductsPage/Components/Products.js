@@ -14,7 +14,13 @@ class Products extends Component {
     let listProducts = null;
     listProducts = products.map((product, index) => {
       return (
-        <Product tensp={product.tensp} gia={product.gia} key={index} _id={product._id} mota={product.mota} />
+        <Product 
+        tensp={product.tensp} 
+        gia={product.gia} key={index} 
+        _id={product._id} 
+        mota={product.mota} 
+        img={product.img}
+        />
       );
     })
     return listProducts;

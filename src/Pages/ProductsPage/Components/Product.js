@@ -8,13 +8,20 @@ class Product extends Component {
     this.props.onAddToCart(product);
     this.props.showModalSuccess('Thank you');
   }
-
+  getImgInContent = (content) => {
+    var m = content.indexOf(`<img src=`) + 10;
+    var n = m;
+    while ((content.charAt(n) !== String.fromCharCode(34)) && (n < content.length)) {
+      n++;
+    }
+    return content.slice(m, n);
+  };
   render() {
     const product = this.props;
     return (
-    <div className="col-md-6 col-lg-3 ">
+      <div className="col-md-6 col-lg-3 ">
         <div className="product">
-          <a href="#/" className="img-prod"><img className="img-fluid" src="images/product-1.jpg" alt="Colorlib Template" />
+          <a href="#/" className="img-prod"><img className="img-fluid" src={this.getImgInContent(this.props.img)} alt="Colorlib Template" />
             <span className="status">30%</span>
             <div className="overlay" />
           </a>
@@ -46,14 +53,14 @@ class Product extends Component {
 }
 
 const mapDispatchToProps = dispatch => {
-    return {
-        onAddToCart: product => {
-            dispatch(actions.addToCart(product));
-        },
-        showModalSuccess: message => {
-          dispatch(actions.showModalSuccess(message));
-        }
+  return {
+    onAddToCart: product => {
+      dispatch(actions.addToCart(product));
+    },
+    showModalSuccess: message => {
+      dispatch(actions.showModalSuccess(message));
     }
+  }
 }
 
 export default connect(null, mapDispatchToProps)(Product);

@@ -1,12 +1,7 @@
 import React, { Fragment, Component } from 'react';
-import { connect } from 'react-redux';
 import './Blog.css';
 import BackgroundImageHeader from './image/BlogBackgroundHeader.jpg'
 import PostsList from './Components/PostsList'
-import Post from './Components/Post'
-import { fetchPostsDataRequest } from './../../Actions/Actions'
-
-
 
 class Blog extends Component {
 
@@ -24,26 +19,9 @@ class Blog extends Component {
           </div>
         </div>
         <PostsList />
-        {/* {this.props.isPostViewing === null ? <PostsList /> : <Post />} */}
       </Fragment >
     )
   }
 }
 
-const mapStateToProps = (state) => {
-
-  return {
-    isPostViewing: state.isPostViewing
-  }
-};
-
-const mapDispatchToProps = (dispatch, props) => {
-  return {
-    fetchAllPosts: () => {
-      dispatch(fetchPostsDataRequest());
-    }
-  }
-};
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Blog);
+export default Blog;

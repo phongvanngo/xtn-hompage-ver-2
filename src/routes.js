@@ -45,9 +45,9 @@ class Routes extends Component {
         main: () => <FeedbackPage />
       },
       {
-        path: '/post',
+        path: '/post/:post_code',
         exact: false,
-        main: () => <Post />
+        main: ({match}) => <Post match ={match} />
       },
       {
         path: '/cart',
@@ -64,6 +64,11 @@ class Routes extends Component {
         path: '/',
         exact: false,
         main: () => <NotFoundpage />
+      },
+      {
+        path: '/detailPost/:postcode',
+        exact: false,
+        main: ({match}) => <Post match={match}/>
       }
 
 

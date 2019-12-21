@@ -25,6 +25,14 @@ class Post extends Component {
   }
 
   render() {
+    var x, post;
+    for (x in this.props.posts) {
+      if (this.props.match.params.post_code === this.props.posts[x]._id) {
+        post = this.props.posts[x];
+        break;
+      }
+    }
+
     var showPostsListSidebar = this.props.posts.map((ele, index) => {
       return (
         <PostItemSidebar
@@ -42,14 +50,14 @@ class Post extends Component {
             <div className="row">
               <div class="col-lg-8">
                 <p style={{ padding: 0 }} >
-                  <span style={{ fontWeight: 800, fontSize: '50px', color: 'black' }} className="mb-3">{this.props.post.title}</span >
+                  <span style={{ fontWeight: 800, fontSize: '50px', color: 'black' }} className="mb-3">{post.title}</span >
                 </p>
                 <p>
-                  <div><i class="far fa-calendar-alt"></i>{" " + this.props.post.time_created}</div>
-                  <div><i class="fas fa-user"></i>{" " + this.props.post.author}</div>
+                  <div><i class="far fa-calendar-alt"></i>{" " + post.time_created}</div>
+                  <div><i class="fas fa-user"></i>{" " + post.author}</div>
                 </p>
                 <p>
-                  {ReactHtmlParser(this.editImageInContent(this.props.post.content))}
+                  {ReactHtmlParser(this.editImageInContent(post.content))}
                 </p>
               </div>
               <div class="col-lg-4 sidebar">
@@ -61,7 +69,6 @@ class Post extends Component {
             </div>
           </div>
         </section>
-        {/* <button style={{ position: "fixed", top: "90vh", left: "90vw" }} className="btn btn-primary py-2 px-3 " onClick={this.props.comeBack}>Quay lại</button> */}
       </Fragment >
     )
   }
@@ -69,17 +76,10 @@ class Post extends Component {
 const mapStateToProps = (state) => {
 
   return {
-    post: state.isPostViewing,
     posts: state.posts
   }
 };
 
-const mapDispatchToProps = (dispatch, props) => {
-  return {
-    comeBack: () => {
-      dispatch(offPostViewing());
-    }
-  }
-};
+
 
 export default connect(mapStateToProps, null)(Post);

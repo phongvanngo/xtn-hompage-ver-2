@@ -71,12 +71,12 @@ class PostsItem extends Component {
                 <div>{" " + this.props.post.author}</div>
                 {/* <div><a href="#" className="meta-chat"><span className="icon-chat" /> 3</a></div> */}
               </div>
-              <h3 className="heading"><NavLink to="/post" onClick={this.props.readmore}>{this.props.post.title}</NavLink></h3>
+              <h3 className="heading"><NavLink to={"/post/" + this.props.post._id} onClick={this.props.readmore}>{this.props.post.title}</NavLink></h3>
               <div className="descriptionText">
                 {ReactHtmlParser(this.getDescription(this.props.post.content))}
               </div>
               <p>
-                <NavLink to="/post" onClick={this.props.readmore}> <button className="btn btn-primary py-2 px-3" onClick={this.props.readmore}>Đọc thêm</button> </NavLink>
+                <NavLink to={"/post/" + this.props.post._id} onClick={this.props.readmore}> <button className="btn btn-primary py-2 px-3" onClick={this.props.readmore}>Đọc thêm</button> </NavLink>
               </p>
             </div>
           </div>
