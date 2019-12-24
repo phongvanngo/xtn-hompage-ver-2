@@ -35,7 +35,7 @@ class Product extends Component {
 								alt="Colorlib Template"
 							/>
 						</div>
-						<span className="status">30%</span>
+						{/* <span className="status">30%</span> */}
 						<div className="overlay" />
 					</a>
 					<div className="text py-3 pb-4 px-3 text-center">
@@ -45,8 +45,8 @@ class Product extends Component {
 						<div className="d-flex">
 							<div className="pricing">
 								<p className="price">
-									<span className="mr-2 price-dc">$120.00</span>
-									<span className="price-sale">${product.gia}</span>
+									{/* <span className="mr-2 price-dc">$120.00</span> */}
+									<span className="price-sale">{product.gia.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')+' '}VND</span>
 								</p>
 							</div>
 						</div>

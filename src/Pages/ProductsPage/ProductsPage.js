@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Navbar from './Components/Navbar';
 import Title from './Components/Title'
 import Products from './Components/Products';
 import Footer from './Components/Footer';
+import './ProductsPage.css'
 
 class ProductsPage extends Component {
   render() {

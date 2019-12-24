@@ -12114,6 +12114,22 @@ h5,
   font-family: "Amatic SC", cursive;
 }
 
+
+.hero.home-slider .slider-item .slider-text h1{
+  font-size: 8vw;
+  color: #fff;
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: "Amatic SC", cursive;
+}
+.owl-carousel.home-slider .slider-item .slider-text h1 {
+  font-size: 8vw;
+  color: #fff;
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: "Amatic SC", cursive;
+}
+
 @media (max-width: 767.98px) {
   .owl-carousel.home-slider .slider-item .slider-text h1 {
     font-size: 40px;

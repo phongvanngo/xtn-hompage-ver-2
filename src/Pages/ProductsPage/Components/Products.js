@@ -31,7 +31,7 @@ class Products extends Component {
 			<section className="ftco-section">
 				<div className="container">
 					<div className="row justify-content-center">
-						<div className="col-md-10 mb-5 text-center">
+						{/* <div className="col-md-10 mb-5 text-center">
 							<ul className="product-category">
 								<li>
 									<a href="#/" className="active">
@@ -51,7 +51,7 @@ class Products extends Component {
 									<a href="#/">Dried</a>
 								</li>
 							</ul>
-						</div>
+						</div> */}
 					</div>
 					<div className="row">{this.showProducts(this.props.products)}</div>
 					<div className="row mt-5">

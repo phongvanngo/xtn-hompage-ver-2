@@ -2,6 +2,7 @@ import React, { Fragment, Component } from 'react';
 import './Blog.css';
 import BackgroundImageHeader from './image/BlogBackgroundHeader.jpg'
 import PostsList from './Components/PostsList'
+import Footer from './Components/Footer';
 
 class Blog extends Component {
 
@@ -19,6 +20,7 @@ class Blog extends Component {
           </div>
         </div>
         <PostsList />
+        <Footer />
       </Fragment >
     )
   }

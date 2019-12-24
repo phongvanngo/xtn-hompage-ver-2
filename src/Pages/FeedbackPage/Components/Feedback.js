@@ -35,22 +35,22 @@ class Feedback extends Component {
               <div className="w-100" />
               <div className="col-md-3 d-flex">
                 <div className="info bg-white p-4">
-                  <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                  <p><span>Địa chỉ:</span>Trường ĐH Công nghệ thông tin, Xã Dĩ An, Bình Dương</p>
                 </div>
               </div>
               <div className="col-md-3 d-flex">
                 <div className="info bg-white p-4">
-                  <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                  <p><span>Số điện thoại:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
                 </div>
               </div>
               <div className="col-md-3 d-flex">
                 <div className="info bg-white p-4">
-                  <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                  <p><span>Địa chỉ Email:</span> <a href="mailto:info@yoursite.com">uit@gmail.com</a></p>
                 </div>
               </div>
               <div className="col-md-3 d-flex">
                 <div className="info bg-white p-4">
-                  <p><span>Website</span> <a href="#/">yoursite.com</a></p>
+                  <p><span>Trang web: </span> <a href="#/">webdevstudio.com</a></p>
                 </div>
               </div>
             </div>
@@ -60,13 +60,13 @@ class Feedback extends Component {
               <div className="col-md-6 order-md-last d-flex">
                 <form onSubmit={this.handleSubmit} action="#" className="bg-white p-5 contact-form">
                   <div className="form-group">
-                    <input name="name" value={name} onChange={this.handleInputChange} type="text" className="form-control" placeholder="Your Name" />
+                    <input name="name" value={name} onChange={this.handleInputChange} type="text" className="form-control" placeholder="Tên của bạn" />
                   </div>
                   <div className="form-group">
-                    <textarea name="description" value={description} onChange={this.handleInputChange} id cols={30} rows={7} className="form-control" placeholder="Message" defaultValue={""} />
+                    <textarea name="description" value={description} onChange={this.handleInputChange} id cols={30} rows={7} className="form-control" placeholder="Tin nhắn" defaultValue={""} />
                   </div>
                   <div className="form-group">
-                    <input type="submit" defaultValue="Send Message" onClick={this.handleSubmit} className="btn btn-primary py-3 px-5" />
+                    <input type="gửi" defaultValue="Gửi" onClick={this.handleSubmit} className="btn btn-primary py-3 px-5" />
                   </div>
                 </form>
               </div>

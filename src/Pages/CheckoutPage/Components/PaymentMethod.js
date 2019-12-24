@@ -30,11 +30,11 @@ class PaymentMethod extends Component {
           <div className="form-group">
             <div className="col-md-12">
               <div className="checkbox">
-                <label><input type="checkbox" defaultValue className="mr-2" /> I have read and accept the terms and conditions</label>
+                <label><input type="checkbox" defaultValue className="mr-2" /> Tôi đã đọc điều khoản và điệu kiện mua hàng</label>
               </div>
             </div>
           </div>
-          <p><a onClick={this.handleSubmit} href="#/" className="btn btn-primary py-3 px-4">Place an order</a></p>
+          <p><a onClick={this.handleSubmit} href="#/" className="btn btn-primary py-3 px-4">Đặt hàng</a></p>
         </div>
       </div>
     )
@@ -44,6 +44,7 @@ class PaymentMethod extends Component {
 export const mapDispatchToProps = dispatch => {
   return {
     onPlaceOrder: data => {
+      console.log(data)
       return dispatch(actions.actPostOrderRequest(data));
     }
   }

@@ -8,18 +8,18 @@ class CartTotal extends Component {
 		return (
 			<div className="col-md-12 d-flex mb-5">
 				<div className="cart-detail cart-total p-3 p-md-4">
-					<h3 className="billing-heading mb-4">Cart Total</h3>
+					<h3 className="billing-heading mb-4">Giỏ hàng</h3>
 					<p className="d-flex">
-						<span>Subtotal</span>
+						<span>Tạm tính</span>
 						<span>{totalCart.subTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}</span>
 					</p>
 					<p className="d-flex">
-						<span>Delivery</span>
+						<span>Phí giao hàng</span>
 						<span>{totalCart.delivery.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}</span>
 					</p>
 					<hr />
 					<p className="d-flex total-price">
-						<span>Total</span>
+						<span>Thành tiền</span>
 						<span>{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')}</span>
 					</p>
 				</div>

@@ -27,10 +27,10 @@ class CartList extends Component {
                     <tr className="text-center">
                       <th>&nbsp;</th>
                       <th>&nbsp;</th>
-                      <th>Product name</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
-                      <th>Total</th>
+                      <th>Tên sản phẩm</th>
+                      <th>Giá</th>
+                      <th>Số lượng</th>
+                      <th>Tổng cộng</th>
                     </tr>
                   </thead>
                   <tbody>

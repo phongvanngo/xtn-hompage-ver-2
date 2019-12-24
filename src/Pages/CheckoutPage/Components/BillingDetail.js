@@ -33,18 +33,18 @@ class BillingDetail extends Component {
     return (
       <div className="col-xl-7">
         <form onSubmit={this.handleSubmit} className="billing-form">
-          <h3 className="mb-4 billing-heading">Billing Details</h3>
+          <h3 className="mb-4 billing-heading">Chi tiết hóa đơn</h3>
           <div className="row align-items-end">
             <div className="col-md-12">
               <div className="form-group">
-                <label htmlFor="name">Name(*)</label>
+                <label htmlFor="name">Tên(*)</label>
                 <input name="name" value={name} onChange={this.handleInputChange} type="text" className="form-control" placeholder />
               </div>
             </div>
             <div className="w-100" />
             <div className="col-md-12">
               <div className="form-group">
-                <label htmlFor="country">University</label>
+                <label htmlFor="country">Trường</label>
                 <div className="select-wrap">
                   <div className="icon"><span className="ion-ios-arrow-down" /></div>
                   <select name="university" value={university} onChange={this.handleInputChange} id className="form-control">
@@ -61,20 +61,20 @@ class BillingDetail extends Component {
             <div className="w-100" /> 
             <div className="col-md-12">
               <div className="form-group">
-                <label htmlFor="streetaddress">Address(*)</label>
+                <label htmlFor="streetaddress">Địa chỉ(*)</label>
                 <input name="address" value={address} onChange={this.handleInputChange} type="text" className="form-control" placeholder="House number and street name" />
               </div>
             </div>
             <div className="w-100" />
             <div className="col-md-6">
               <div className="form-group">
-                <label>Phone(*)</label>
+                <label>Số điện thoại(*)</label>
                 <input name="phone" value={phone} onChange={this.handleInputChange} type="text" className="form-control" />
               </div>
             </div>
             <div className="col-md-6">
               <div className="form-group">
-                <label>Email(*)</label>
+                <label>Địa chỉ Email(*)</label>
                 <input name="email" value={email} onChange={this.handleInputChange} type="text" className="form-control" />
               </div>
             </div>

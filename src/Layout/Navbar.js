@@ -10,7 +10,7 @@ class Navbar extends Component {
 
         <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light scrolled sleep awake" id="ftco-navbar">
           <div className="container">
-            <span className="navbar-brand" href="index.html">XUÂN TÌNH NGUYỆN</span>
+            <span className="navbar-brand" href="index.html">XUÂN TÌNH NGUYỆN 2020</span>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
               aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" >
               <span className="oi oi-menu"></span> Menu
