@@ -3,11 +3,15 @@ import './Home.css';
 import Footer from './../Blog/Components/Footer';
 import XTNCarousel from './Components/Carousel';
 import BTCarousel from './Components/ReactSliderCarousel';
+import Timeline from './Components/Timeline';
+import GalleryCarousel from './Components/GallerySlideShow';
+import BoostrapCarousel from './Components/BoostrapCarousel';
 class Homepage extends Component {
 	render() {
 		return (
 			<Fragment>
-				<BTCarousel />
+				<GalleryCarousel />
+				<Timeline />
 				<Footer />
 			</Fragment>
 		);

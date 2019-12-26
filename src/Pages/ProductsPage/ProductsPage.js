@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Title from './Components/Title'
 import Products from './Components/Products';
-import Footer from './Components/Footer';
+import Footer from './../Blog/Components/Footer'
 import './ProductsPage.css'
 
 class ProductsPage extends Component {

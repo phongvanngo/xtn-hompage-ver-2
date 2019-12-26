@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
 class Footer extends Component {
+	scrollTop = () => {
+		window.scroll(0, 0);
+	};
 	render() {
 		return (
 			<footer className="ftco-footer ftco-section">
 				<div className="container">
 					<div className="row">
 						<div className="mouse">
-							<a href="#/" className="mouse-icon">
+							<a href="#/" className="mouse-icon" onClick={this.scrollTop}>
 								<div className="mouse-wheel">
 									<span className="ion-ios-arrow-up" />
 								</div>

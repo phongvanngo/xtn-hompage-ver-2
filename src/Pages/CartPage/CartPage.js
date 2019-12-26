@@ -3,7 +3,7 @@ import Navbar from './Components/Navbar';
 import Title from './Components/Title';
 import CartList from './Components/CartList';
 import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+import Footer from './../Blog/Components/Footer'
 import './CartPage.css'
 
 class CartPage extends Component {

@@ -3,7 +3,7 @@ import Navbar  from './Components/Navbar';
 import Title from './Components/Title';
 import Checkout from './Components/Checkout';
 import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+import Footer from './../Blog/Components/Footer'
 
 class CheckoutPage extends Component {
   render() {
