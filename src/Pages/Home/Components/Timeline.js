@@ -69,8 +69,6 @@ class XTNCarousel extends Component {
 				<br />
 				<br />
 				<br />
-				<br />
-				<br />
 				<div className="container">
 					{/* Page header */}
 					<div className="page-header">

@@ -19,31 +19,43 @@ class GallerySlideshow extends Component {
 		const images = [
 			{
         src:
-        'https://i.imgur.com/KStFwQw.jpg',
+        'https://i.imgur.com/7gdVTEQ.jpg',
 				width: 4,
 				height: 3
 			},
 			{
         src:
-        'https://i.imgur.com/MSIEoMV.jpg',
+        'https://i.imgur.com/sSrjkMF.jpg',
 				width: 4,
 				height: 3
 			},
 			{
         src:
-        'https://i.imgur.com/ZHUphUf.jpg',
+        'https://i.imgur.com/bmjLZft.jpg',
 				width: 4,
 				height: 3
 			},
 			{
         src:
-        'https://i.imgur.com/H15foeF.jpg',
+        'https://i.imgur.com/O7yw9T3.jpg',
 				width: 4,
 				height: 3
 			},
 			{
         src:
-        'https://i.imgur.com/KTVLqlE.jpg',
+        'https://i.imgur.com/5ZeL0cQ.jpg',
+				width: 4,
+				height: 3
+			},
+			{
+        src:
+        'https://i.imgur.com/fAaUfEa.jpg',
+				width: 4,
+				height: 3
+			},
+			{
+        src:
+        'https://i.imgur.com/N2dUqEv.jpg',
 				width: 4,
 				height: 3
 			}
