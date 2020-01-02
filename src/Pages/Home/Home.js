@@ -7,6 +7,7 @@ import Timeline from './Components/Timeline';
 import GalleryCarousel from './Components/GallerySlideShow';
 import Introduction from './Components/Introduction';
 import BoostrapCarousel from './Components/BoostrapCarousel';
+import HotFace from './Components/HotFace'
 class Homepage extends Component {
 	render() {
 		return (
@@ -14,6 +15,7 @@ class Homepage extends Component {
 				<GalleryCarousel />
 				<Introduction />
 				<Timeline />
+        <HotFace />
 				<Footer />
 			</Fragment>
 		);
