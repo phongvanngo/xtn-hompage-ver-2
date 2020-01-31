@@ -33,6 +33,7 @@ class Product extends Component {
 								className="img-fluid"
 								src={this.getImgInContent(this.props.img)}
 								alt="Colorlib Template"
+								object-fit= "cover"
 							/>
 						</div>
 						{/* <span className="status">30%</span> */}

@@ -4,7 +4,7 @@ import Routes from './routes';
 
 
 class App extends Component {
-  render() {
+  render() { 
     return (
       <Fragment>
         <Routes />
